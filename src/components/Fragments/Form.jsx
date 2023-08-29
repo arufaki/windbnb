@@ -70,7 +70,7 @@ export default function Form({ filterApp, cityApp, guestApp, stays }) {
   return (
     <header className="sm:flex sm:flex-row sm:items-center sm:justify-between">
       <Image
-        src="/src/assets/img/logo.png"
+        src="src/assets/img/logo.png"
         alt="logo"
         className="mt-5 sm:mt-0"
         onClick={() => window.location.reload()}
