@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish:wght@400;500;600;700;800&family=Poppins&display=swap");
+
+*:focus {
+  outline: none;
+}
+
+#root {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.aku-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+@media only screen and (max-width: 400px) {
+  .aku-parent {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
