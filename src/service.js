@@ -1,4 +1,5 @@
-const api = "./src/stays.json";
+import api from "./stays.json";
+
 export const staysApi = async () => {
   try {
     const res = await fetch(api);

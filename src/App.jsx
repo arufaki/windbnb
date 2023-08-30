@@ -2,25 +2,27 @@ import { useEffect, useState } from "react";
 import { staysApi } from "./service";
 import Card from "./components/Fragments/Card";
 import Form from "./components/Fragments/Form";
+import api from "./stays.json";
 
 function App() {
   const [stays, setStays] = useState([]);
-  const [isLoading, setIsloading] = useState(true);
+  const [isLoading, setIsloading] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
   const [cityMatch, setCityMatch] = useState("");
   const [guestMatch, setGuestMatch] = useState(0);
 
   useEffect(() => {
-    const fetchApi = async () => {
-      try {
-        const res = await staysApi();
-        setStays(res);
-        setIsloading(false);
-      } catch (error) {
-        console.log("Error : ", error);
-      }
-    };
-    fetchApi();
+    // const fetchApi = async () => {
+    //   try {
+    //     const res = await staysApi();
+    //     setStays(res);
+    //     setIsloading(false);
+    //   } catch (error) {
+    //     console.log("Error : ", error);
+    //   }
+    // };
+    // fetchApi();
+    setStays(api);
   }, []);
 
   const handleFilter = (newFilter) => {
@@ -41,6 +43,7 @@ function App() {
 
   const allStays = stays.map((stay, index) => <Card key={index} stay={stay} />);
 
+  console.log(stays);
   return (
     <>
       <Form
