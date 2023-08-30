@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Search/Navbar";
 import Image from "../Elements/Logo/Image";
+import logo from "../../assets/img/logo.png";
 
 export default function Form({ filterApp, cityApp, guestApp, stays }) {
   const [filter, setFilter] = useState([]);
@@ -70,7 +71,7 @@ export default function Form({ filterApp, cityApp, guestApp, stays }) {
   return (
     <header className="sm:flex sm:flex-row sm:items-center sm:justify-between">
       <Image
-        src="src/assets/img/logo.png"
+        src={logo}
         alt="logo"
         className="mt-5 sm:mt-0"
         onClick={() => window.location.reload()}
